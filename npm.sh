@@ -132,9 +132,6 @@ function update_script() {
 
   msg_info "Building Frontend"
   cd ./frontend
-  pnpm install &>/dev/null
-  pnpm upgrade &>/dev/null
-  pnpm run build &>/dev/null
   cp -r dist/* /app/frontend
   cp -r app-images/* /app/frontend/images
   msg_ok "Built Frontend"
