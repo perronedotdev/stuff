@@ -130,12 +130,6 @@ function update_script() {
   python3 -m pip install --no-cache-dir certbot-dns-cloudflare &>/dev/null
   msg_ok "Setup Enviroment"
 
-  msg_info "Building Frontend"
-  cd ./frontend
-  cp -r dist/* /app/frontend
-  cp -r app-images/* /app/frontend/images
-  msg_ok "Built Frontend"
-
   msg_info "Initializing Backend"
   rm -rf /app/config/default.json &>/dev/null
   if [ ! -f /app/config/production.json ]; then
